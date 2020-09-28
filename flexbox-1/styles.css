@@ -13,8 +13,8 @@ body {
     border-radius: 4px;
     flex-basis: 1200px;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    padding: 20px;
 }
 
 .item {
@@ -22,17 +22,26 @@ body {
     border: 1px solid hsl(35, 40%, 78%);
     border-radius: 4px;
     box-shadow: 2px 2px 4px hsl(35, 40%, 78%);
-    padding: 20px;
+    padding: 25px;
+}
+
+#aside {
+    flex-basis: 300px;
+    flex-grow: 1;
+    margin-bottom: 40px;
 }
 
 
 
 @media only screen and (min-width: 600px) {
-    #aside {
-        flex-basis: 300px;
-        flex-shrink: 0;
+    .container {
+        flex-wrap: nowrap;
+    }
 
+    #aside {
+        flex-shrink: 0;
         margin-right: 40px;
+        margin-bottom: 0;
         /* is dit wel de bedoeling ? */
     }
 
