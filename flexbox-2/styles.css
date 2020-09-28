@@ -1,0 +1,42 @@
+body {
+    background-color: hsl(40, 88%, 97%);
+    color: hsl(196, 64%, 37%);
+    display: flex;
+    justify-content: center;
+}
+
+.item {
+    background-color: hsl(211, 77%, 88%);
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 20px;
+    padding: 20px;
+}
+
+.container {
+    flex-basis: 1200px;
+    padding: 20px;
+}
+
+header {
+    /* display: flex;
+    justify-content: center;
+    flex-wrap: wrap; */
+    text-align: center;
+}
+
+@media only screen and (min-width: 700px) {
+    .main {
+        display: flex;
+        justify-content: center;
+    }
+
+    .item {
+        flex-basis: 215px;
+        flex-grow: 1;
+        flex-shrink: 0;
+    }
+
+}
