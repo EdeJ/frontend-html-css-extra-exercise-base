@@ -34,6 +34,29 @@ h1 {
 .highlight {
     color: hsl(210, 93%, 19%);
     font-weight: 400;
+    position: relative;
+}
+
+.highlight:hover::before {
+    color: white;
+    content: "Dit is een latijns woord";
+    position: absolute;
+    top: -60px;
+    left: -50%;
+    width: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: hsl(29, 100%, 47%);
+}
+
+.highlight:hover::after {
+    content: " ";
+    border-top: 19px solid hsl(29, 100%, 47%);
+    border-left: 7px solid transparent;
+    border-right: 20px solid transparent;
+    position: absolute;
+    top: -20px;
+    left: 50%;
 }
 
 footer {
@@ -43,4 +66,13 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+footer p::after {
+    content: "\00a9";
+}
+
+article p::before,
+article p::after {
+    content: "\0022";
 }
