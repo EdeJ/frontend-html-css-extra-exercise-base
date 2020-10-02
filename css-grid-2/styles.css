@@ -14,10 +14,22 @@ body {
 }
 
 .container {
+    width: 100%;
     background-color: hsl(212, 36%, 90%);
-    width: 900px;
     display: grid;
     gap: 15px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(9, 213px);
+    grid-template-areas:
+        ". a"
+        "b c"
+        "b d"
+        "e ."
+        ". f"
+        "g g"
+        ". h"
+        "i i"
+        "j .";
 }
 
 .item {
@@ -27,57 +39,61 @@ body {
     align-items: center;
 }
 
-@media screen and (min-width: 567px) {
+@media screen and (min-width: 600px) {
     .container {
+        width: 900px;
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 100px 100px 100px 100px 100px 100px 100px;
+        grid-template-rows: repeat(7, 213px);
         grid-template-areas:
-            ". . . 1"
-            "2 2 3 ."
-            "2 2 4 5"
+            ". . . a"
+            "b b c ."
+            "b b d e"
             ". . . ."
-            ". 6 7 7"
-            "8 9 7 7"
-            "10 . . .";
+            ". f g g"
+            "h i g g"
+            "j . . .";
     }
 }
 
+
 #item-1 {
-    grid-area: 1;
+    grid-area: a;
 }
 
 #item-2 {
-    grid-area: 2;
+    grid-area: b;
+    background-color: hsl(208, 48%, 47%);
 }
 
 #item-3 {
-    grid-area: 3;
+    grid-area: c;
 }
 
 #item-4 {
-    grid-area: 4;
+    grid-area: d;
 }
 
 #item-5 {
-    grid-area: 5;
+    grid-area: e;
 }
 
 #item-6 {
-    grid-area: 6;
+    grid-area: f;
 }
 
 #item-7 {
-    grid-area: 7;
+    grid-area: g;
+    background-color: hsl(208, 48%, 47%);
 }
 
 #item-8 {
-    grid-area: 8;
+    grid-area: h;
 }
 
 #item-9 {
-    grid-area: 9;
+    grid-area: i;
 }
 
 #item-10 {
-    grid-area: 10;
+    grid-area: j;
 }
