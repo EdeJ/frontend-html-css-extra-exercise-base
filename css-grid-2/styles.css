@@ -1,0 +1,83 @@
+/* 
+Randvoorwaarden
+De kleuren die gebruikt zijn: hsl(212, 36%, 90%) en hsl(212, 43%, 65%) en hsl(208, 48%, 47%);
+Zorg dat de container 900px breed is
+Vlak 2 en 7 zijn donkerder dan de rest en de cijfers staan altijd in het midden
+De kolommen en rijen zijn allemaal gelijke fracties 
+*/
+
+body {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.container {
+    background-color: hsl(212, 36%, 90%);
+    width: 900px;
+    display: grid;
+    gap: 15px;
+}
+
+.item {
+    background-color: hsl(212, 43%, 65%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 567px) {
+    .container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 100px 100px 100px 100px 100px 100px 100px;
+        grid-template-areas:
+            ". . . 1"
+            "2 2 3 ."
+            "2 2 4 5"
+            ". . . ."
+            ". 6 7 7"
+            "8 9 7 7"
+            "10 . . .";
+    }
+}
+
+#item-1 {
+    grid-area: 1;
+}
+
+#item-2 {
+    grid-area: 2;
+}
+
+#item-3 {
+    grid-area: 3;
+}
+
+#item-4 {
+    grid-area: 4;
+}
+
+#item-5 {
+    grid-area: 5;
+}
+
+#item-6 {
+    grid-area: 6;
+}
+
+#item-7 {
+    grid-area: 7;
+}
+
+#item-8 {
+    grid-area: 8;
+}
+
+#item-9 {
+    grid-area: 9;
+}
+
+#item-10 {
+    grid-area: 10;
+}
